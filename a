@@ -1,0 +1,65 @@
+#!/bin/bash
+
+if [ $# -ne 2 ]; then
+    echo "Usage: $0 <height> <snow_width>" >&2
+    exit 1
+fi
+
+HEIGHT=$1
+SNOW_WIDTH=$2
+
+if ! [[ "$HEIGHT" =~ ^[0-9]+$ ]] || ! [[ "$SNOW_WIDTH" =~ ^[0-9]+$ ]] || [ "$HEIGHT" -le 0 ] || [ "$SNOW_WIDTH" -le 0 ]; then
+    echo "Error: Both parameters must be positive integers." >&2
+    exit 1
+fi
+
+TIER_HEIGHT=$((HEIGHT / 4))
+if [ "$TIER_HEIGHT" -lt 2 ]; then
+    echo "Error: Height too small to form a tree." >&2
+    exit 1
+fi
+
+MAX_WIDTH=$((SNOW_WIDTH - 2))
+if [ "$MAX_WIDTH" -lt 3 ]; then
+    echo "Error: Snow width too small." >&2
+    exit 1
+fi
+
+print_triangle() {
+    local start=1
+    local height=$1
+    local max_width=$2
+    local char1="*"
+    local char2="#"
+    local i=0
+
+    while [ $i -lt $height ]; do
+        local width=$((start + i * 2))
+        if [ "$width" -gt "$max_width" ]; then
+            width=$max_width
+        fi
+        local padding=$(((max_width - width) / 2))
+        if ((i % 2 == 0)); then
+            printf "%*s%s\n" "$padding" "" "$(printf "%${width}s" | tr ' ' "$char1")"
+        else
+            printf "%*s%s\n" "$padding" "" "$(printf "%${width}s" | tr ' ' "$char2")"
+        fi
+        i=$((i + 1))
+    done
+}
+
+TIER_COUNT=2
+tier=0
+until [ $tier -ge $TIER_COUNT ]; do
+    print_triangle "$TIER_HEIGHT" "$MAX_WIDTH"
+    tier=$((tier + 1))
+done
+
+for i in 1 2; do
+    padding=$(((MAX_WIDTH - 3) / 2))
+    printf "%*s###\n" "$padding" ""
+done
+
+for ((i = 0; i < 1; i++)); do
+    printf "%s\n" "$(printf "%${SNOW_WIDTH}s" | tr ' ' "*")"
+done
