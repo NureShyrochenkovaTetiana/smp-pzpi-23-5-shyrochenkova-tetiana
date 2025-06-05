@@ -1,15 +1,15 @@
-МІНІСТЕРСТВО ОСВІТИ І НАУКИ УКРАЇНИ
-ХАРКІВСЬКИЙ НАЦІОНАЛЬНИЙ УНІВЕРСИТЕТ РАДІОЕЛЕКТРОНІКИ
+РњР†РќР†РЎРўР•Р РЎРўР’Рћ РћРЎР’Р†РўР Р† РќРђРЈРљР РЈРљР РђР‡РќР
+РҐРђР РљР†Р’РЎР¬РљРР™ РќРђР¦Р†РћРќРђР›Р¬РќРР™ РЈРќР†Р’Р•Р РЎРРўР•Рў Р РђР”Р†РћР•Р›Р•РљРўР РћРќР†РљР
 
 
-КАФЕДРА ПРОГРАМНОЇ ІНЖЕНЕРІЇ
+РљРђР¤Р•Р”Р Рђ РџР РћР“Р РђРњРќРћР‡ Р†РќР–Р•РќР•Р Р†Р‡
 
 
 
 
-Звіт
-з лабораторної роботи № 4 
-з дисципліни «Скриптові мови програмування»
+Р—РІС–С‚
+Р· Р»Р°Р±РѕСЂР°С‚РѕСЂРЅРѕС— СЂРѕР±РѕС‚Рё в„– 4 
+Р· РґРёСЃС†РёРїР»С–РЅРё В«РЎРєСЂРёРїС‚РѕРІС– РјРѕРІРё РїСЂРѕРіСЂР°РјСѓРІР°РЅРЅСЏВ»
    
 
 
@@ -19,72 +19,34 @@
 
 
 
-Виконала:                                                                                     Перевірив:
-ст. гр. ПЗПІ-23-5                        		                ст. викладач кафедри ПІ
-Широченкова Тетяна Василівна    	          	               Сокорчук Ігор Петрович
+Р’РёРєРѕРЅР°Р»Р°:                                                                                     РџРµСЂРµРІС–СЂРёРІ:
+СЃС‚. РіСЂ. РџР—РџР†-23-5                        		                СЃС‚. РІРёРєР»Р°РґР°С‡ РєР°С„РµРґСЂРё РџР†
+РЁРёСЂРѕС‡РµРЅРєРѕРІР° РўРµС‚СЏРЅР° Р’Р°СЃРёР»С–РІРЅР°    	          	               РЎРѕРєРѕСЂС‡СѓРє Р†РіРѕСЂ РџРµС‚СЂРѕРІРёС‡
 
 
 
 
 
 
-Харків 2025
-1 ІСТОРІЯ ЗМІН
+РҐР°СЂРєС–РІ 2025
+1 Р†РЎРўРћР Р†РЇ Р—РњР†Рќ
 
-№ДатаВерсія звітуОпис змін та виправлень112.05.20250.1Створено розділ «Завдання»213.05.20250.1Створено розділ «Опис Виконаної роботи»314.05.20250.1Створено розділи «Висновки»,  «Додаток А», «Додаток Б», «Додаток В»
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-2 ЗАВДАННЯ
-
-     Метою другої лабораторної роботи є вдосконалення раніше створеного веб-магазину шляхом оптимізації структури сайту, реалізації аутентифікації користувачів і додавання можливості редагування профілю. 
-     Завдання спрямоване на закріплення навичок роботи з сесіями, формами, завантаженням файлів, а також поділом коду на багаторазові компоненти для зручності супроводу та розширення функціоналу.
-
-2.1  Вимоги до скрипта
-     Скрипт має наступні вимоги: 
-     —  виключити дублювання шапки та підвалу сайту шляхом виділення їх у окремі файли;
-	—  забезпечити авторизацію користувачів з обмеженням доступу до сайту для неавторизованих;
-     —  створити сторінку логіну з формою для введення імені користувача та пароля;
-     —  реалізувати збереження стану авторизації через сесію;
-     —  при неавторизованому доступі показувати сторінку з повідомленням про необхідність входу;
-     —  додати сторінку профілю з можливістю перегляду та редагування особистої інформації;
-     —  забезпечити завантаження та збереження фото користувача;
-     —  Провести валідацію даних у формі профілю:
-     а) всі поля мають бути заповнені;
-     б) ім’я та прізвище — текстові рядки довжиною не менше одного символа;
-	в)користувач має бути не молодше 16 років;
-г)короткий опис користувача — не менше 50 символів.
-
-
-3 ОПИС ВИКОНАНОЇ РОБОТИ
-
-     Під час виконання роботи було створено окремі файли header.php та footer.php, які містять відповідно шапку та підвал сайту, що дозволило уникнути дублювання коду і спростити подальше редагування сайту. В головному файлі main.php реалізовано підключення цих частин, а також відображення потрібного контенту.
-     Для реалізації системи авторизації створено сторінку логіну з формою, де користувач може ввести ім’я та пароль. Дані авторизації зберігаються у сесії, що дозволяє відслідковувати статус користувача під час роботи з сайтом. Неавторизованим користувачам замість контенту сайту відображається сторінка з повідомленням про необхідність увійти у систему.
-     На сторінці профілю реалізовано можливість редагування особистих даних: імені, прізвища, дати народження, короткої інформації та фото користувача. Для завантаження фото використано форму з типом multipart/form-data. Перед збереженням даних проведено валідацію згідно з вимогами, щоб забезпечити коректність і повноту інформації.
-     Таким чином, зроблено кроки до підвищення зручності користування сайтом, а також покращення організації коду та безпеки доступу.
+в„–
+Р”Р°С‚Р°
+Р’РµСЂСЃС–СЏ Р·РІС–С‚Сѓ
+РћРїРёСЃ Р·РјС–РЅ С‚Р° РІРёРїСЂР°РІР»РµРЅСЊ
+1
+12.05.2025
+0.1
+РЎС‚РІРѕСЂРµРЅРѕ СЂРѕР·РґС–Р» В«Р—Р°РІРґР°РЅРЅСЏВ»
+2
+13.05.2025
+0.1
+РЎС‚РІРѕСЂРµРЅРѕ СЂРѕР·РґС–Р» В«РћРїРёСЃ Р’РёРєРѕРЅР°РЅРѕС— СЂРѕР±РѕС‚РёВ»
+3
+14.05.2025
+0.1
+РЎС‚РІРѕСЂРµРЅРѕ СЂРѕР·РґС–Р»Рё В«Р’РёСЃРЅРѕРІРєРёВ»,  В«Р”РѕРґР°С‚РѕРє РђВ», В«Р”РѕРґР°С‚РѕРє Р‘В», В«Р”РѕРґР°С‚РѕРє Р’В»
 
 
 
@@ -97,11 +59,65 @@
 
 
 
-4 ВИСНОВКИ
 
-     В ході лабораторної роботи було удосконалено структуру веб-сайту шляхом винесення шапки та підвалу у окремі файли, що дозволило уникнути дублювання коду і зробило проект більш зручним для підтримки та розвитку. Було реалізовано базову систему авторизації, яка обмежує доступ до контенту сайту лише для зареєстрованих користувачів, підвищуючи безпеку і контроль над використанням ресурсу.
-     Додано сторінку профілю користувача з можливістю завантаження особистого фото і редагування персональних даних. Впроваджена валідація введених даних гарантує якість і достовірність інформації. Реалізація цих функціональних можливостей значно покращила зручність користування сайтом і зробила його більш функціональним.
-     Отриманий досвід сприяє поглибленому розумінню роботи з PHP, сесіями, формами та обробкою файлів, а також основ веб-безпеки і організації коду. Це є важливим кроком у вивченні розробки динамічних веб-додатків.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2 Р—РђР’Р”РђРќРќРЇ
+
+     РњРµС‚РѕСЋ РґСЂСѓРіРѕС— Р»Р°Р±РѕСЂР°С‚РѕСЂРЅРѕС— СЂРѕР±РѕС‚Рё С” РІРґРѕСЃРєРѕРЅР°Р»РµРЅРЅСЏ СЂР°РЅС–С€Рµ СЃС‚РІРѕСЂРµРЅРѕРіРѕ РІРµР±-РјР°РіР°Р·РёРЅСѓ С€Р»СЏС…РѕРј РѕРїС‚РёРјС–Р·Р°С†С–С— СЃС‚СЂСѓРєС‚СѓСЂРё СЃР°Р№С‚Сѓ, СЂРµР°Р»С–Р·Р°С†С–С— Р°СѓС‚РµРЅС‚РёС„С–РєР°С†С–С— РєРѕСЂРёСЃС‚СѓРІР°С‡С–РІ С– РґРѕРґР°РІР°РЅРЅСЏ РјРѕР¶Р»РёРІРѕСЃС‚С– СЂРµРґР°РіСѓРІР°РЅРЅСЏ РїСЂРѕС„С–Р»СЋ. 
+     Р—Р°РІРґР°РЅРЅСЏ СЃРїСЂСЏРјРѕРІР°РЅРµ РЅР° Р·Р°РєСЂС–РїР»РµРЅРЅСЏ РЅР°РІРёС‡РѕРє СЂРѕР±РѕС‚Рё Р· СЃРµСЃС–СЏРјРё, С„РѕСЂРјР°РјРё, Р·Р°РІР°РЅС‚Р°Р¶РµРЅРЅСЏРј С„Р°Р№Р»С–РІ, Р° С‚Р°РєРѕР¶ РїРѕРґС–Р»РѕРј РєРѕРґСѓ РЅР° Р±Р°РіР°С‚РѕСЂР°Р·РѕРІС– РєРѕРјРїРѕРЅРµРЅС‚Рё РґР»СЏ Р·СЂСѓС‡РЅРѕСЃС‚С– СЃСѓРїСЂРѕРІРѕРґСѓ С‚Р° СЂРѕР·С€РёСЂРµРЅРЅСЏ С„СѓРЅРєС†С–РѕРЅР°Р»Сѓ.
+
+2.1  Р’РёРјРѕРіРё РґРѕ СЃРєСЂРёРїС‚Р°
+     РЎРєСЂРёРїС‚ РјР°С” РЅР°СЃС‚СѓРїРЅС– РІРёРјРѕРіРё: 
+     вЂ”  РІРёРєР»СЋС‡РёС‚Рё РґСѓР±Р»СЋРІР°РЅРЅСЏ С€Р°РїРєРё С‚Р° РїС–РґРІР°Р»Сѓ СЃР°Р№С‚Сѓ С€Р»СЏС…РѕРј РІРёРґС–Р»РµРЅРЅСЏ С—С… Сѓ РѕРєСЂРµРјС– С„Р°Р№Р»Рё;
+	вЂ”  Р·Р°Р±РµР·РїРµС‡РёС‚Рё Р°РІС‚РѕСЂРёР·Р°С†С–СЋ РєРѕСЂРёСЃС‚СѓРІР°С‡С–РІ Р· РѕР±РјРµР¶РµРЅРЅСЏРј РґРѕСЃС‚СѓРїСѓ РґРѕ СЃР°Р№С‚Сѓ РґР»СЏ РЅРµР°РІС‚РѕСЂРёР·РѕРІР°РЅРёС…;
+     вЂ”  СЃС‚РІРѕСЂРёС‚Рё СЃС‚РѕСЂС–РЅРєСѓ Р»РѕРіС–РЅСѓ Р· С„РѕСЂРјРѕСЋ РґР»СЏ РІРІРµРґРµРЅРЅСЏ С–РјРµРЅС– РєРѕСЂРёСЃС‚СѓРІР°С‡Р° С‚Р° РїР°СЂРѕР»СЏ;
+     вЂ”  СЂРµР°Р»С–Р·СѓРІР°С‚Рё Р·Р±РµСЂРµР¶РµРЅРЅСЏ СЃС‚Р°РЅСѓ Р°РІС‚РѕСЂРёР·Р°С†С–С— С‡РµСЂРµР· СЃРµСЃС–СЋ;
+     вЂ”  РїСЂРё РЅРµР°РІС‚РѕСЂРёР·РѕРІР°РЅРѕРјСѓ РґРѕСЃС‚СѓРїС– РїРѕРєР°Р·СѓРІР°С‚Рё СЃС‚РѕСЂС–РЅРєСѓ Р· РїРѕРІС–РґРѕРјР»РµРЅРЅСЏРј РїСЂРѕ РЅРµРѕР±С…С–РґРЅС–СЃС‚СЊ РІС…РѕРґСѓ;
+     вЂ”  РґРѕРґР°С‚Рё СЃС‚РѕСЂС–РЅРєСѓ РїСЂРѕС„С–Р»СЋ Р· РјРѕР¶Р»РёРІС–СЃС‚СЋ РїРµСЂРµРіР»СЏРґСѓ С‚Р° СЂРµРґР°РіСѓРІР°РЅРЅСЏ РѕСЃРѕР±РёСЃС‚РѕС— С–РЅС„РѕСЂРјР°С†С–С—;
+     вЂ”  Р·Р°Р±РµР·РїРµС‡РёС‚Рё Р·Р°РІР°РЅС‚Р°Р¶РµРЅРЅСЏ С‚Р° Р·Р±РµСЂРµР¶РµРЅРЅСЏ С„РѕС‚Рѕ РєРѕСЂРёСЃС‚СѓРІР°С‡Р°;
+     вЂ”  РџСЂРѕРІРµСЃС‚Рё РІР°Р»С–РґР°С†С–СЋ РґР°РЅРёС… Сѓ С„РѕСЂРјС– РїСЂРѕС„С–Р»СЋ:
+     Р°) РІСЃС– РїРѕР»СЏ РјР°СЋС‚СЊ Р±СѓС‚Рё Р·Р°РїРѕРІРЅРµРЅС–;
+     Р±) С–РјвЂ™СЏ С‚Р° РїСЂС–Р·РІРёС‰Рµ вЂ” С‚РµРєСЃС‚РѕРІС– СЂСЏРґРєРё РґРѕРІР¶РёРЅРѕСЋ РЅРµ РјРµРЅС€Рµ РѕРґРЅРѕРіРѕ СЃРёРјРІРѕР»Р°;
+	РІ)РєРѕСЂРёСЃС‚СѓРІР°С‡ РјР°С” Р±СѓС‚Рё РЅРµ РјРѕР»РѕРґС€Рµ 16 СЂРѕРєС–РІ;
+Рі)РєРѕСЂРѕС‚РєРёР№ РѕРїРёСЃ РєРѕСЂРёСЃС‚СѓРІР°С‡Р° вЂ” РЅРµ РјРµРЅС€Рµ 50 СЃРёРјРІРѕР»С–РІ.
+
+
+3 РћРџРРЎ Р’РРљРћРќРђРќРћР‡ Р РћР‘РћРўР
+
+     РџС–Рґ С‡Р°СЃ РІРёРєРѕРЅР°РЅРЅСЏ СЂРѕР±РѕС‚Рё Р±СѓР»Рѕ СЃС‚РІРѕСЂРµРЅРѕ РѕРєСЂРµРјС– С„Р°Р№Р»Рё header.php С‚Р° footer.php, СЏРєС– РјС–СЃС‚СЏС‚СЊ РІС–РґРїРѕРІС–РґРЅРѕ С€Р°РїРєСѓ С‚Р° РїС–РґРІР°Р» СЃР°Р№С‚Сѓ, С‰Рѕ РґРѕР·РІРѕР»РёР»Рѕ СѓРЅРёРєРЅСѓС‚Рё РґСѓР±Р»СЋРІР°РЅРЅСЏ РєРѕРґСѓ С– СЃРїСЂРѕСЃС‚РёС‚Рё РїРѕРґР°Р»СЊС€Рµ СЂРµРґР°РіСѓРІР°РЅРЅСЏ СЃР°Р№С‚Сѓ. Р’ РіРѕР»РѕРІРЅРѕРјСѓ С„Р°Р№Р»С– main.php СЂРµР°Р»С–Р·РѕРІР°РЅРѕ РїС–РґРєР»СЋС‡РµРЅРЅСЏ С†РёС… С‡Р°СЃС‚РёРЅ, Р° С‚Р°РєРѕР¶ РІС–РґРѕР±СЂР°Р¶РµРЅРЅСЏ РїРѕС‚СЂС–Р±РЅРѕРіРѕ РєРѕРЅС‚РµРЅС‚Сѓ.
+     Р”Р»СЏ СЂРµР°Р»С–Р·Р°С†С–С— СЃРёСЃС‚РµРјРё Р°РІС‚РѕСЂРёР·Р°С†С–С— СЃС‚РІРѕСЂРµРЅРѕ СЃС‚РѕСЂС–РЅРєСѓ Р»РѕРіС–РЅСѓ Р· С„РѕСЂРјРѕСЋ, РґРµ РєРѕСЂРёСЃС‚СѓРІР°С‡ РјРѕР¶Рµ РІРІРµСЃС‚Рё С–РјвЂ™СЏ С‚Р° РїР°СЂРѕР»СЊ. Р”Р°РЅС– Р°РІС‚РѕСЂРёР·Р°С†С–С— Р·Р±РµСЂС–РіР°СЋС‚СЊСЃСЏ Сѓ СЃРµСЃС–С—, С‰Рѕ РґРѕР·РІРѕР»СЏС” РІС–РґСЃР»С–РґРєРѕРІСѓРІР°С‚Рё СЃС‚Р°С‚СѓСЃ РєРѕСЂРёСЃС‚СѓРІР°С‡Р° РїС–Рґ С‡Р°СЃ СЂРѕР±РѕС‚Рё Р· СЃР°Р№С‚РѕРј. РќРµР°РІС‚РѕСЂРёР·РѕРІР°РЅРёРј РєРѕСЂРёСЃС‚СѓРІР°С‡Р°Рј Р·Р°РјС–СЃС‚СЊ РєРѕРЅС‚РµРЅС‚Сѓ СЃР°Р№С‚Сѓ РІС–РґРѕР±СЂР°Р¶Р°С”С‚СЊСЃСЏ СЃС‚РѕСЂС–РЅРєР° Р· РїРѕРІС–РґРѕРјР»РµРЅРЅСЏРј РїСЂРѕ РЅРµРѕР±С…С–РґРЅС–СЃС‚СЊ СѓРІС–Р№С‚Рё Сѓ СЃРёСЃС‚РµРјСѓ.
+     РќР° СЃС‚РѕСЂС–РЅС†С– РїСЂРѕС„С–Р»СЋ СЂРµР°Р»С–Р·РѕРІР°РЅРѕ РјРѕР¶Р»РёРІС–СЃС‚СЊ СЂРµРґР°РіСѓРІР°РЅРЅСЏ РѕСЃРѕР±РёСЃС‚РёС… РґР°РЅРёС…: С–РјРµРЅС–, РїСЂС–Р·РІРёС‰Р°, РґР°С‚Рё РЅР°СЂРѕРґР¶РµРЅРЅСЏ, РєРѕСЂРѕС‚РєРѕС— С–РЅС„РѕСЂРјР°С†С–С— С‚Р° С„РѕС‚Рѕ РєРѕСЂРёСЃС‚СѓРІР°С‡Р°. Р”Р»СЏ Р·Р°РІР°РЅС‚Р°Р¶РµРЅРЅСЏ С„РѕС‚Рѕ РІРёРєРѕСЂРёСЃС‚Р°РЅРѕ С„РѕСЂРјСѓ Р· С‚РёРїРѕРј multipart/form-data. РџРµСЂРµРґ Р·Р±РµСЂРµР¶РµРЅРЅСЏРј РґР°РЅРёС… РїСЂРѕРІРµРґРµРЅРѕ РІР°Р»С–РґР°С†С–СЋ Р·РіС–РґРЅРѕ Р· РІРёРјРѕРіР°РјРё, С‰РѕР± Р·Р°Р±РµР·РїРµС‡РёС‚Рё РєРѕСЂРµРєС‚РЅС–СЃС‚СЊ С– РїРѕРІРЅРѕС‚Сѓ С–РЅС„РѕСЂРјР°С†С–С—.
+     РўР°РєРёРј С‡РёРЅРѕРј, Р·СЂРѕР±Р»РµРЅРѕ РєСЂРѕРєРё РґРѕ РїС–РґРІРёС‰РµРЅРЅСЏ Р·СЂСѓС‡РЅРѕСЃС‚С– РєРѕСЂРёСЃС‚СѓРІР°РЅРЅСЏ СЃР°Р№С‚РѕРј, Р° С‚Р°РєРѕР¶ РїРѕРєСЂР°С‰РµРЅРЅСЏ РѕСЂРіР°РЅС–Р·Р°С†С–С— РєРѕРґСѓ С‚Р° Р±РµР·РїРµРєРё РґРѕСЃС‚СѓРїСѓ.
+
+
+
+
+
+
+
+
+
+
+
+
+4 Р’РРЎРќРћР’РљР
+
+     Р’ С…РѕРґС– Р»Р°Р±РѕСЂР°С‚РѕСЂРЅРѕС— СЂРѕР±РѕС‚Рё Р±СѓР»Рѕ СѓРґРѕСЃРєРѕРЅР°Р»РµРЅРѕ СЃС‚СЂСѓРєС‚СѓСЂСѓ РІРµР±-СЃР°Р№С‚Сѓ С€Р»СЏС…РѕРј РІРёРЅРµСЃРµРЅРЅСЏ С€Р°РїРєРё С‚Р° РїС–РґРІР°Р»Сѓ Сѓ РѕРєСЂРµРјС– С„Р°Р№Р»Рё, С‰Рѕ РґРѕР·РІРѕР»РёР»Рѕ СѓРЅРёРєРЅСѓС‚Рё РґСѓР±Р»СЋРІР°РЅРЅСЏ РєРѕРґСѓ С– Р·СЂРѕР±РёР»Рѕ РїСЂРѕРµРєС‚ Р±С–Р»СЊС€ Р·СЂСѓС‡РЅРёРј РґР»СЏ РїС–РґС‚СЂРёРјРєРё С‚Р° СЂРѕР·РІРёС‚РєСѓ. Р‘СѓР»Рѕ СЂРµР°Р»С–Р·РѕРІР°РЅРѕ Р±Р°Р·РѕРІСѓ СЃРёСЃС‚РµРјСѓ Р°РІС‚РѕСЂРёР·Р°С†С–С—, СЏРєР° РѕР±РјРµР¶СѓС” РґРѕСЃС‚СѓРї РґРѕ РєРѕРЅС‚РµРЅС‚Сѓ СЃР°Р№С‚Сѓ Р»РёС€Рµ РґР»СЏ Р·Р°СЂРµС”СЃС‚СЂРѕРІР°РЅРёС… РєРѕСЂРёСЃС‚СѓРІР°С‡С–РІ, РїС–РґРІРёС‰СѓСЋС‡Рё Р±РµР·РїРµРєСѓ С– РєРѕРЅС‚СЂРѕР»СЊ РЅР°Рґ РІРёРєРѕСЂРёСЃС‚Р°РЅРЅСЏРј СЂРµСЃСѓСЂСЃСѓ.
+     Р”РѕРґР°РЅРѕ СЃС‚РѕСЂС–РЅРєСѓ РїСЂРѕС„С–Р»СЋ РєРѕСЂРёСЃС‚СѓРІР°С‡Р° Р· РјРѕР¶Р»РёРІС–СЃС‚СЋ Р·Р°РІР°РЅС‚Р°Р¶РµРЅРЅСЏ РѕСЃРѕР±РёСЃС‚РѕРіРѕ С„РѕС‚Рѕ С– СЂРµРґР°РіСѓРІР°РЅРЅСЏ РїРµСЂСЃРѕРЅР°Р»СЊРЅРёС… РґР°РЅРёС…. Р’РїСЂРѕРІР°РґР¶РµРЅР° РІР°Р»С–РґР°С†С–СЏ РІРІРµРґРµРЅРёС… РґР°РЅРёС… РіР°СЂР°РЅС‚СѓС” СЏРєС–СЃС‚СЊ С– РґРѕСЃС‚РѕРІС–СЂРЅС–СЃС‚СЊ С–РЅС„РѕСЂРјР°С†С–С—. Р РµР°Р»С–Р·Р°С†С–СЏ С†РёС… С„СѓРЅРєС†С–РѕРЅР°Р»СЊРЅРёС… РјРѕР¶Р»РёРІРѕСЃС‚РµР№ Р·РЅР°С‡РЅРѕ РїРѕРєСЂР°С‰РёР»Р° Р·СЂСѓС‡РЅС–СЃС‚СЊ РєРѕСЂРёСЃС‚СѓРІР°РЅРЅСЏ СЃР°Р№С‚РѕРј С– Р·СЂРѕР±РёР»Р° Р№РѕРіРѕ Р±С–Р»СЊС€ С„СѓРЅРєС†С–РѕРЅР°Р»СЊРЅРёРј.
+     РћС‚СЂРёРјР°РЅРёР№ РґРѕСЃРІС–Рґ СЃРїСЂРёСЏС” РїРѕРіР»РёР±Р»РµРЅРѕРјСѓ СЂРѕР·СѓРјС–РЅРЅСЋ СЂРѕР±РѕС‚Рё Р· PHP, СЃРµСЃС–СЏРјРё, С„РѕСЂРјР°РјРё С‚Р° РѕР±СЂРѕР±РєРѕСЋ С„Р°Р№Р»С–РІ, Р° С‚Р°РєРѕР¶ РѕСЃРЅРѕРІ РІРµР±-Р±РµР·РїРµРєРё С– РѕСЂРіР°РЅС–Р·Р°С†С–С— РєРѕРґСѓ. Р¦Рµ С” РІР°Р¶Р»РёРІРёРј РєСЂРѕРєРѕРј Сѓ РІРёРІС‡РµРЅРЅС– СЂРѕР·СЂРѕР±РєРё РґРёРЅР°РјС–С‡РЅРёС… РІРµР±-РґРѕРґР°С‚РєС–РІ.
      
      
 
@@ -110,24 +126,24 @@
 
 
 
-ДОДАТОК А
-Відеозапис
+Р”РћР”РђРўРћРљ Рђ
+Р’С–РґРµРѕР·Р°РїРёСЃ
 
-Відеозапис презентації результатів лабораторної роботи: https://youtu.be/vf6D783tT7w
+Р’С–РґРµРѕР·Р°РїРёСЃ РїСЂРµР·РµРЅС‚Р°С†С–С— СЂРµР·СѓР»СЊС‚Р°С‚С–РІ Р»Р°Р±РѕСЂР°С‚РѕСЂРЅРѕС— СЂРѕР±РѕС‚Рё: https://youtu.be/vf6D783tT7w
 
-Хронологічний опис відеозапису:
-00:00 Внесені зміни
-00:25 Кнопка “Увійти в акаунт”
-00:35 Неавторизований користувач 
-01:28 Логін
-02:25 Профіль користувача 
-03:08 Авторизований користувач 
-04:05 Реалізація 
+РҐСЂРѕРЅРѕР»РѕРіС–С‡РЅРёР№ РѕРїРёСЃ РІС–РґРµРѕР·Р°РїРёСЃСѓ:
+00:00 Р’РЅРµСЃРµРЅС– Р·РјС–РЅРё
+00:25 РљРЅРѕРїРєР° вЂњРЈРІС–Р№С‚Рё РІ Р°РєР°СѓРЅС‚вЂќ
+00:35 РќРµР°РІС‚РѕСЂРёР·РѕРІР°РЅРёР№ РєРѕСЂРёСЃС‚СѓРІР°С‡ 
+01:28 Р›РѕРіС–РЅ
+02:25 РџСЂРѕС„С–Р»СЊ РєРѕСЂРёСЃС‚СѓРІР°С‡Р° 
+03:08 РђРІС‚РѕСЂРёР·РѕРІР°РЅРёР№ РєРѕСЂРёСЃС‚СѓРІР°С‡ 
+04:05 Р РµР°Р»С–Р·Р°С†С–СЏ 
 04:21 index.php
-05:00 Дані користувача
+05:00 Р”Р°РЅС– РєРѕСЂРёСЃС‚СѓРІР°С‡Р°
 05:17 store/credentials.php
 06:26 store/profile.php
-07:05 Зображення користувачів
+07:05 Р—РѕР±СЂР°Р¶РµРЅРЅСЏ РєРѕСЂРёСЃС‚СѓРІР°С‡С–РІ
 08:37 views/404.php
 09:00 views/login.php
 10:14 views/profile.php
@@ -139,24 +155,24 @@
 
 
 
-ДОДАТОК Б
-Графічні матеріали
+Р”РћР”РђРўРћРљ Р‘
+Р“СЂР°С„С–С‡РЅС– РјР°С‚РµСЂС–Р°Р»Рё
 
 
-Рисунок Б.1 — Профіль користувача
+Р РёСЃСѓРЅРѕРє Р‘.1 вЂ” РџСЂРѕС„С–Р»СЊ РєРѕСЂРёСЃС‚СѓРІР°С‡Р°
 
 
-Рисунок Б.2 — Сторінка “404”
+Р РёСЃСѓРЅРѕРє Р‘.2 вЂ” РЎС‚РѕСЂС–РЅРєР° вЂњ404вЂќ
 
 
-Рисунок Б.3 — Кнопка “Увійти в акаунт”
+Р РёСЃСѓРЅРѕРє Р‘.3 вЂ” РљРЅРѕРїРєР° вЂњРЈРІС–Р№С‚Рё РІ Р°РєР°СѓРЅС‚вЂќ
 
 
 
-ДОДАТОК В
-Програмний код
-В.1 smp-pzpi-23-5-shyrochenkova-tetiana 
-GitHub репозиторій:
+Р”РћР”РђРўРћРљ Р’
+РџСЂРѕРіСЂР°РјРЅРёР№ РєРѕРґ
+Р’.1 smp-pzpi-23-5-shyrochenkova-tetiana 
+GitHub СЂРµРїРѕР·РёС‚РѕСЂС–Р№:
 https://github.com/NureShyrochenkovaTetiana/smp-pzpi-23-5-shyrochenkova-tetiana/tree/main/Lab4/smp-pzpi-23-5-shyrochenkova-tetiana-lab4/smp-pzpi-23-5-shyrochenkova-tetiana-lab4-code
 
 ./index.php
@@ -272,13 +288,13 @@ https://github.com/NureShyrochenkovaTetiana/smp-pzpi-23-5-shyrochenkova-tetiana/
  20     if (!$hasProducts) {
  21         $connection->exec("
  22             INSERT INTO goods (name, price) VALUES
- 23             ('Молоко пастеризоване', 12),
- 24         ('Хліб чорний', 9),
- 25         ('Сир білий', 21),
- 26         ('Сметана 20%', 25),
- 27         ('Кефір 1%', 19),
- 28         ('Вода газована', 25),
- 29         ('Печиво \"Весна\"', 25);
+ 23             ('РњРѕР»РѕРєРѕ РїР°СЃС‚РµСЂРёР·РѕРІР°РЅРµ', 12),
+ 24         ('РҐР»С–Р± С‡РѕСЂРЅРёР№', 9),
+ 25         ('РЎРёСЂ Р±С–Р»РёР№', 21),
+ 26         ('РЎРјРµС‚Р°РЅР° 20%', 25),
+ 27         ('РљРµС„С–СЂ 1%', 19),
+ 28         ('Р’РѕРґР° РіР°Р·РѕРІР°РЅР°', 25),
+ 29         ('РџРµС‡РёРІРѕ \"Р’РµСЃРЅР°\"', 25);
  30         ");
  31     }
  32 }
@@ -311,17 +327,17 @@ https://github.com/NureShyrochenkovaTetiana/smp-pzpi-23-5-shyrochenkova-tetiana/
   6                     <div class="flex h-8 w-8 items-center justify-center rounded-lg bg-green-600">
   7                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8c0 5.5-4.78 10-10 10"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></g></svg>
   8                     </div>
-  9                     <span class="text-xl font-bold text-green-600">Весна</span>
+  9                     <span class="text-xl font-bold text-green-600">Р’РµСЃРЅР°</span>
  10                 </div>
  11                 <div class="inline-flex space-x-5">
  12                     <a href="/" class="block text-sm text-gray-600 hover:text-green-600 transition-colors">
- 13                         Головна
+ 13                         Р“РѕР»РѕРІРЅР°
  14                     </a>
  15                     <a href="/goods" class="block text-sm text-gray-600 hover:text-green-600 transition-colors">
- 16                         Товари
+ 16                         РўРѕРІР°СЂРё
  17                     </a>
  18                     <a href="/cart" class="block text-sm text-gray-600 hover:text-green-600 transition-colors">
- 19                         Кошик
+ 19                         РљРѕС€РёРє
  20                     </a>
  21                 </div>
  22             </div>
@@ -346,15 +362,15 @@ https://github.com/NureShyrochenkovaTetiana/smp-pzpi-23-5-shyrochenkova-tetiana/
  13                     </svg>
  14                 </div>
  15                 <span class="text-xl font-bold text-green-600">
- 16                 Весна
+ 16                 Р’РµСЃРЅР°
  17               </span>
  18             </div>
  19             <nav class="hidden md:flex items-center space-x-8">
  20                 <a href="/" class="text-sm font-medium transition-colors hover:text-green-600">
- 21                     Головна
+ 21                     Р“РѕР»РѕРІРЅР°
  22                 </a>
  23                 <a href="/goods" class="text-sm font-medium transition-colors hover:text-green-600">
- 24                     Товари
+ 24                     РўРѕРІР°СЂРё
  25                 </a>
  26             </nav>
  27             <?php if(isset($_SESSION['username'])) : ?>
@@ -366,12 +382,12 @@ https://github.com/NureShyrochenkovaTetiana/smp-pzpi-23-5-shyrochenkova-tetiana/
  33                         <svg xmlns="http://www.w3.org/2000/svg" class="size-4" viewBox="0 0 24 24">
  34                             <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 11l-1 9m5-9l-4-7M2 11h20M3.5 11l1.6 7.4a2 2 0 0 0 2 1.6h9.8a2 2 0 0 0 2-1.6l1.7-7.4M4.5 15.5h15M5 11l4-7m0 7l1 9" />
  35                         </svg>
- 36                         Кошик
+ 36                         РљРѕС€РёРє
  37                     </a>
  38                 </div>
  39             <?php else : ?>
  40                 <a href="/login" class="flex items-center justify-center min-w-32 h-9 rounded-md text-base text-white bg-green-600 hover:bg-green-700 px-2 gap-2">
- 41                     Увійти в акаунт
+ 41                     РЈРІС–Р№С‚Рё РІ Р°РєР°СѓРЅС‚
  42                 </a>
  43             <?php endif; ?>
  44         </div>
@@ -385,14 +401,14 @@ https://github.com/NureShyrochenkovaTetiana/smp-pzpi-23-5-shyrochenkova-tetiana/
   4     <meta charset="UTF-8">
   5     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   6     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  7     <title>Магазин "Весна"</title>
+  7     <title>РњР°РіР°Р·РёРЅ "Р’РµСЃРЅР°"</title>
   8     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   9 </head>
  10 <body class="flex flex-col w-full h-dvh mt-auto">
  11 <?php include "./templates/header.php" ?>
  12 <main class="flex flex-col size-full bg-slate-50 items-center justify-center gap-6">
  13     <h1 class="scroll-m-20 text-2xl font-semibold tracking-tight">404</h1>
- 14     <p class="text-xl font-medium tracking-tight">Сторінки, що ви шукаєте не існує</з>
+ 14     <p class="text-xl font-medium tracking-tight">РЎС‚РѕСЂС–РЅРєРё, С‰Рѕ РІРё С€СѓРєР°С”С‚Рµ РЅРµ С–СЃРЅСѓС”</Р·>
  15 </main>
  16 <?php include "./templates/footer.php" ?>
  17 </body>
@@ -429,7 +445,7 @@ https://github.com/NureShyrochenkovaTetiana/smp-pzpi-23-5-shyrochenkova-tetiana/
  28     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
  29     <meta http-equiv="X-UA-Compatible" content="ie=edge">
  30     <title>
- 31         Магазин "Весна"
+ 31         РњР°РіР°Р·РёРЅ "Р’РµСЃРЅР°"
  32     </title>
  33     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4">
  34     </script>
@@ -440,15 +456,15 @@ https://github.com/NureShyrochenkovaTetiana/smp-pzpi-23-5-shyrochenkova-tetiana/
  39 <main class="flex-1 container mx-auto px-4 py-8">
  40     <div class="mb-8">
  41         <h1 class="text-3xl font-bold mb-2">
- 42             Наші товари
+ 42             РќР°С€С– С‚РѕРІР°СЂРё
  43         </h1>
  44     </div>
  45     <div>
  46     <?php if (empty($cartItemsForDisplay)): ?>
  47         <div class="text-center py-12 bg-white shadow-md rounded-lg">
- 48             <p class="text-gray-500 mb-4 text-xl">Ваш кошик пустий</p>
+ 48             <p class="text-gray-500 mb-4 text-xl">Р’Р°С€ РєРѕС€РёРє РїСѓСЃС‚РёР№</p>
  49             <a href="/goods" class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 bg-green-600 text-white hover:bg-green-700">
- 50                 Продовжити покупки
+ 50                 РџСЂРѕРґРѕРІР¶РёС‚Рё РїРѕРєСѓРїРєРё
  51             </a>
  52         </div>
  53     <?php else: ?>
@@ -456,18 +472,18 @@ https://github.com/NureShyrochenkovaTetiana/smp-pzpi-23-5-shyrochenkova-tetiana/
  55             <div class="lg:col-span-2">
  56                 <div class="bg-white shadow-md rounded-lg">
  57                     <div class="p-6">
- 58                         <h2 class="text-xl font-semibold">Товари</h2>
+ 58                         <h2 class="text-xl font-semibold">РўРѕРІР°СЂРё</h2>
  59                     </div>
  60                     <div class="p-6 pt-0">
  61                         <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
  62                             <table class="w-full text-sm">
  63                                 <thead class="[&_tr]:border-b [&_tr]:border-b-slate-300 border-gray-200">
  64                                     <tr>
- 65                                         <th class="h-12 px-3 text-left align-middle font-semibold text-gray-600">Назва</th>
- 66                                         <th class="h-12 px-3 text-left align-middle font-semibold text-gray-600">Ціна</th>
- 67                                         <th class="h-12 px-3 text-left align-middle font-semibold text-gray-600">Кількість</th>
- 68                                         <th class="h-12 px-3 text-right align-middle font-semibold text-gray-600">До сплати</th>
- 69                                         <th class="h-12 px-3 text-center align-middle font-semibold text-gray-600">Дії</th>
+ 65                                         <th class="h-12 px-3 text-left align-middle font-semibold text-gray-600">РќР°Р·РІР°</th>
+ 66                                         <th class="h-12 px-3 text-left align-middle font-semibold text-gray-600">Р¦С–РЅР°</th>
+ 67                                         <th class="h-12 px-3 text-left align-middle font-semibold text-gray-600">РљС–Р»СЊРєС–СЃС‚СЊ</th>
+ 68                                         <th class="h-12 px-3 text-right align-middle font-semibold text-gray-600">Р”Рѕ СЃРїР»Р°С‚Рё</th>
+ 69                                         <th class="h-12 px-3 text-center align-middle font-semibold text-gray-600">Р”С–С—</th>
  70                                     </tr>
  71                                 </thead>
  72                                 <tbody class="[&_tr:last-child]:border-0">
@@ -513,20 +529,20 @@ https://github.com/NureShyrochenkovaTetiana/smp-pzpi-23-5-shyrochenkova-tetiana/
 112             <div class="lg:col-span-1">
 113                 <div class="bg-white shadow-md rounded-lg">
 114                     <div class="p-6">
-115                          <h2 class="text-xl font-semibold">Підсумок замовлення</h2>
+115                          <h2 class="text-xl font-semibold">РџС–РґСЃСѓРјРѕРє Р·Р°РјРѕРІР»РµРЅРЅСЏ</h2>
 116                     </div>
 117                     <div class="p-6 pt-0 space-y-4">
 118                         <hr class="border-gray-200" />
 119                         <div class="flex justify-between font-semibold text-lg text-gray-800">
-120                             <span>До сплати:</span>
+120                             <span>Р”Рѕ СЃРїР»Р°С‚Рё:</span>
 121                             <span class="text-green-600">$<?php echo number_format($total, 2); ?></span>
 122                         </div>
 123                         <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" class="space-y-3">
 124                             <button type="submit" name="action" value="checkout" class="w-full inline-flex items-center justify-center rounded-md text-base font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-11 px-4 py-2 bg-green-600 text-white hover:bg-green-700">
-125                                 Оформити замовлення
+125                                 РћС„РѕСЂРјРёС‚Рё Р·Р°РјРѕРІР»РµРЅРЅСЏ
 126                             </button>
 127                             <a href="/" class="w-full inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-gray-300 bg-white hover:bg-gray-100 hover:text-gray-800 h-10 px-4 py-2 text-gray-700">
-128                                 Продовжити покупки
+128                                 РџСЂРѕРґРѕРІР¶РёС‚Рё РїРѕРєСѓРїРєРё
 129                             </a>
 130                         </form>
 131                     </div>
@@ -569,7 +585,7 @@ https://github.com/NureShyrochenkovaTetiana/smp-pzpi-23-5-shyrochenkova-tetiana/
  26     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
  27     <meta http-equiv="X-UA-Compatible" content="ie=edge">
  28     <title>
- 29         Магазин "Весна"
+ 29         РњР°РіР°Р·РёРЅ "Р’РµСЃРЅР°"
  30     </title>
  31     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4">
  32     </script>
@@ -580,7 +596,7 @@ https://github.com/NureShyrochenkovaTetiana/smp-pzpi-23-5-shyrochenkova-tetiana/
  37 <main class="flex-1 container mx-auto px-4 py-8">
  38     <div class="mb-8">
  39         <h1 class="text-3xl font-bold mb-2">
- 40             Наші товари
+ 40             РќР°С€С– С‚РѕРІР°СЂРё
  41         </h1>
  42     </div>
  43     <div>
@@ -590,16 +606,16 @@ https://github.com/NureShyrochenkovaTetiana/smp-pzpi-23-5-shyrochenkova-tetiana/
  47                   <thead class="[&_tr]:border-b [&_tr]:border-b-slate-300">
  48                   <tr>
  49                       <th class="h-10 px-2 text-left align-middle font-semibold text-muted-foreground">
- 50                           Назва
+ 50                           РќР°Р·РІР°
  51                       </th>
  52                       <th class="h-10 px-2 text-left align-middle font-semibold text-muted-foreground">
- 53                           Ціна
+ 53                           Р¦С–РЅР°
  54                       </th>
  55                       <th class="h-10 px-2 text-left align-middle font-semibold text-muted-foreground w-32">
- 56                           Кількість
+ 56                           РљС–Р»СЊРєС–СЃС‚СЊ
  57                       </th>
  58                       <th class="h-10 px-2 text-left align-middle font-semibold text-muted-foreground text-right">
- 59                           Дії
+ 59                           Р”С–С—
  60                       </th>
  61                   </tr>
  62                   </thead>
@@ -617,7 +633,7 @@ https://github.com/NureShyrochenkovaTetiana/smp-pzpi-23-5-shyrochenkova-tetiana/
  74                           </td>
  75                           <td class="p-2 align-middle text-right">
  76                               <button type="submit" name="add_to_cart_product_id" value="<?php echo $product['id']; ?>" class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-9 px-3 text-white bg-green-600 hover:bg-green-700">
- 77                                   У кошик
+ 77                                   РЈ РєРѕС€РёРє
  78                               </button>
  79                           </td>
  80                       </tr>
@@ -645,7 +661,7 @@ https://github.com/NureShyrochenkovaTetiana/smp-pzpi-23-5-shyrochenkova-tetiana/
   9     <meta name="viewport"
  10                 content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
  11     <meta http-equiv="X-UA-Compatible" content="ie=edge">
- 12     <title>Магазин "Весна"</title>
+ 12     <title>РњР°РіР°Р·РёРЅ "Р’РµСЃРЅР°"</title>
  13     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
  14 </head>
  15 <body class="flex flex-col w-full h-dvh mt-auto">
@@ -656,27 +672,27 @@ https://github.com/NureShyrochenkovaTetiana/smp-pzpi-23-5-shyrochenkova-tetiana/
  20                 <div class="flex h-8 w-8 items-center justify-center rounded-lg bg-green-600">
  21                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8c0 5.5-4.78 10-10 10"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></g></svg>
  22                 </div>
- 23                 <span class="text-xl font-bold text-green-600">Весна</span>
+ 23                 <span class="text-xl font-bold text-green-600">Р’РµСЃРЅР°</span>
  24             </div>
  25 
  26             <nav class="hidden md:flex items-center space-x-8">
  27                 <a href="/" class="text-sm font-medium transition-colors hover:text-green-600">
- 28                     Головна
+ 28                     Р“РѕР»РѕРІРЅР°
  29                 </a>
  30                 <a href="/goods" class="text-sm font-medium transition-colors hover:text-green-600">
- 31                     Товари
+ 31                     РўРѕРІР°СЂРё
  32                 </a>
  33             </nav>
  34 
  35             <a href="/cart" class="flex items-center justify-center min-w-32 h-9 rounded-md text-base text-white bg-green-600 hover:bg-green-700 gap-3 px-2">
  36                 <svg xmlns="http://www.w3.org/2000/svg" class="size-4" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 11l-1 9m5-9l-4-7M2 11h20M3.5 11l1.6 7.4a2 2 0 0 0 2 1.6h9.8a2 2 0 0 0 2-1.6l1.7-7.4M4.5 15.5h15M5 11l4-7m0 7l1 9"/></svg>
- 37         Кошик
+ 37         РљРѕС€РёРє
  38             </a>
  39         </div>
  40     </div>
  41 </header>
  42 <main class="flex flex-col size-full bg-slate-50 items-center justify-center gap-6">
- 43     <h1 class="scroll-m-20 text-2xl font-semibold tracking-tight">Магазин "Весна"</h1>
+ 43     <h1 class="scroll-m-20 text-2xl font-semibold tracking-tight">РњР°РіР°Р·РёРЅ "Р’РµСЃРЅР°"</h1>
  44 </main>
  45 <footer class="bg-slate-50 border-t border-slate-300">
  46     <div class="container mx-auto px-4 py-8">
@@ -686,17 +702,17 @@ https://github.com/NureShyrochenkovaTetiana/smp-pzpi-23-5-shyrochenkova-tetiana/
  50                     <div class="flex h-8 w-8 items-center justify-center rounded-lg bg-green-600">
  51                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8c0 5.5-4.78 10-10 10"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></g></svg>
  52                     </div>
- 53                     <span class="text-xl font-bold text-green-600">Весна</span>
+ 53                     <span class="text-xl font-bold text-green-600">Р’РµСЃРЅР°</span>
  54                 </div>
  55                 <div class="inline-flex space-x-5">
  56                     <a href="/" class="block text-sm text-gray-600 hover:text-green-600 transition-colors">
- 57                         Головна
+ 57                         Р“РѕР»РѕРІРЅР°
  58                     </a>
  59                     <a href="/goods" class="block text-sm text-gray-600 hover:text-green-600 transition-colors">
- 60                         Товари
+ 60                         РўРѕРІР°СЂРё
  61                     </a>
  62                     <a href="/cart" class="block text-sm text-gray-600 hover:text-green-600 transition-colors">
- 63                         Кошик
+ 63                         РљРѕС€РёРє
  64                     </a>
  65                 </div>
  66             </div>
@@ -717,7 +733,7 @@ https://github.com/NureShyrochenkovaTetiana/smp-pzpi-23-5-shyrochenkova-tetiana/
   7   global $credentials;
   8 
   9   if ($_POST["username"] != $credentials["username"] || $_POST["password"] != $credentials["password"]) {
- 10     $error_message = "Невірний логін або пароль";
+ 10     $error_message = "РќРµРІС–СЂРЅРёР№ Р»РѕРіС–РЅ Р°Р±Рѕ РїР°СЂРѕР»СЊ";
  11   } else {
  12     $_SESSION["username"] = $credentials["username"];
  13      $_SESSION["authorizedAt"] = time();
@@ -733,33 +749,33 @@ https://github.com/NureShyrochenkovaTetiana/smp-pzpi-23-5-shyrochenkova-tetiana/
  23     <meta charset="UTF-8">
  24     <meta name="viewport"  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
  25     <meta http-equiv="X-UA-Compatible" content="ie=edge">
- 26     <title>Логін</title>
+ 26     <title>Р›РѕРіС–РЅ</title>
  27     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
  28 </head>
  29 <body>
  30     <main class="flex w-full h-dvh justify-center items-center">
  31         <section class="flex flex-col w-fit h-auto gap-4 border border-slate-300 rounded-lg p-10">
- 32             <h1 class="scroll-m-20 text-2xl font-semibold tracking-tight text-center">Логін</h1>
+ 32             <h1 class="scroll-m-20 text-2xl font-semibold tracking-tight text-center">Р›РѕРіС–РЅ</h1>
  33             <form class="flex flex-col w-[300px] gap-4" method="post">
  34                 <label for="username">
- 35                     Ім?я користувача
+ 35                     Р†Рј?СЏ РєРѕСЂРёСЃС‚СѓРІР°С‡Р°
  36                     <input
  37                         id="username"
  38                         name="username"
  39                         type="text"
- 40                         placeholder="Введіть ім?я користувача"
+ 40                         placeholder="Р’РІРµРґС–С‚СЊ С–Рј?СЏ РєРѕСЂРёСЃС‚СѓРІР°С‡Р°"
  41                         class="bg-gray-50 border border-gray-300 text-black text-sm rounded-lg focus:ring-green-500 focus:border-green-500 focus:ring focus:ring-green-500 block w-full p-2.5 outline-none"
  42                         autofocus
  43                         required
  44                     />
  45                 </label>
  46                 <label for="password">
- 47                     Пароль
+ 47                     РџР°СЂРѕР»СЊ
  48                     <input
  49                         id="password"
  50                         name="password"
  51                         type="password"
- 52                         placeholder="Введіть пароль"
+ 52                         placeholder="Р’РІРµРґС–С‚СЊ РїР°СЂРѕР»СЊ"
  53                         class="bg-gray-50 border border-gray-300 text-black text-sm rounded-lg focus:ring-green-500 focus:border-green-500 focus:ring focus:ring-green-500 block w-full p-2.5 outline-none"
  54                         required
  55                     />
@@ -767,8 +783,8 @@ https://github.com/NureShyrochenkovaTetiana/smp-pzpi-23-5-shyrochenkova-tetiana/
  57         
  58         <p class="text-red-500"><?php echo $error_message; ?></p>
  59 
- 60                 <button class="w-full bg-green-600 text-white h-9 px-3 min-w-32 rounded-lg text-sm hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-700">Увійти</button>
- 61                 <a href="/" class="text-sm text-center text-green-600 underline decoration-2">Перейти на головну</a>
+ 60                 <button class="w-full bg-green-600 text-white h-9 px-3 min-w-32 rounded-lg text-sm hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-700">РЈРІС–Р№С‚Рё</button>
+ 61                 <a href="/" class="text-sm text-center text-green-600 underline decoration-2">РџРµСЂРµР№С‚Рё РЅР° РіРѕР»РѕРІРЅСѓ</a>
  62             </form>
  63         </section>
  64     </main>
@@ -789,19 +805,19 @@ https://github.com/NureShyrochenkovaTetiana/smp-pzpi-23-5-shyrochenkova-tetiana/
  11         $age = $today->diff($birthDate)->y;
  12 
  13     if (strlen(trim($_POST["firstName"])) == 0) {
- 14             throw new Exception("Ім?я обов?язкове");
+ 14             throw new Exception("Р†Рј?СЏ РѕР±РѕРІ?СЏР·РєРѕРІРµ");
  15         }
  16 
  17         if (strlen(trim($_POST['lastName'])) == 0) {
- 18             throw new Exception("Прізвищем обов?язкове");
+ 18             throw new Exception("РџСЂС–Р·РІРёС‰РµРј РѕР±РѕРІ?СЏР·РєРѕРІРµ");
  19         }
  20 
  21         if (strlen(trim($_POST["bio"])) == 0) {
- 22             throw new Exception("Опис обов?язковий");
+ 22             throw new Exception("РћРїРёСЃ РѕР±РѕРІ?СЏР·РєРѕРІРёР№");
  23         }
  24 
  25         if ($age < 16) {
- 26             throw new Exception("Користувач не проходить за віковими обмеженнями");
+ 26             throw new Exception("РљРѕСЂРёСЃС‚СѓРІР°С‡ РЅРµ РїСЂРѕС…РѕРґРёС‚СЊ Р·Р° РІС–РєРѕРІРёРјРё РѕР±РјРµР¶РµРЅРЅСЏРјРё");
  27         }
  28 
  29     $profile = [
@@ -823,11 +839,11 @@ https://github.com/NureShyrochenkovaTetiana/smp-pzpi-23-5-shyrochenkova-tetiana/
  45   $imageSize = getimagesize($_FILES["avatar"]["tmp_name"]);
  46 
  47     if (!$imageSize) {
- 48         throw new Exception("Файл не є зображенням");
+ 48         throw new Exception("Р¤Р°Р№Р» РЅРµ С” Р·РѕР±СЂР°Р¶РµРЅРЅСЏРј");
  49         }
  50 
  51     if ($_FILES["avatar"]["size"] > 2 * 1024 * 1024) {
- 52         throw new Exception("Файл занадто великий");
+ 52         throw new Exception("Р¤Р°Р№Р» Р·Р°РЅР°РґС‚Рѕ РІРµР»РёРєРёР№");
  53     }
  54 
  55     $file = $targetDir . basename($_FILES["avatar"]["name"]);
@@ -835,7 +851,7 @@ https://github.com/NureShyrochenkovaTetiana/smp-pzpi-23-5-shyrochenkova-tetiana/
  57     $imageFileType = strtolower(pathinfo($file, PATHINFO_EXTENSION));
  58 
  59     if (!in_array($imageFileType, $exts)) {
- 60         throw new Exception("Дозволені лише розширення " . implode(', ', $exts));
+ 60         throw new Exception("Р”РѕР·РІРѕР»РµРЅС– Р»РёС€Рµ СЂРѕР·С€РёСЂРµРЅРЅСЏ " . implode(', ', $exts));
  61     }
  62 
  63     move_uploaded_file($_FILES["avatar"]["tmp_name"], $file);
@@ -856,7 +872,7 @@ https://github.com/NureShyrochenkovaTetiana/smp-pzpi-23-5-shyrochenkova-tetiana/
  78     <meta charset="UTF-8">
  79     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
  80     <meta http-equiv="X-UA-Compatible" content="ie=edge">
- 81     <title>Магазин "Весна"</title>
+ 81     <title>РњР°РіР°Р·РёРЅ "Р’РµСЃРЅР°"</title>
  82     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
  83 </head>
  84 <body class="flex flex-col w-full h-dvh mt-auto">
@@ -870,7 +886,7 @@ https://github.com/NureShyrochenkovaTetiana/smp-pzpi-23-5-shyrochenkova-tetiana/
  92         <form id="upload_form" method="post" enctype="multipart/form-data">
  93           <input id="upload" type="file" name="avatar" accept="image/*" required hidden />
  94           <label for="upload" class="flex bg-white justify-center items-center items-center leading-none text-black h-9 px-3 min-w-[128px] rounded-lg text-sm border border-slate-300 hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
- 95             Завантажити
+ 95             Р—Р°РІР°РЅС‚Р°Р¶РёС‚Рё
  96           </label>
  97         </form>
  98             </div>
@@ -878,12 +894,12 @@ https://github.com/NureShyrochenkovaTetiana/smp-pzpi-23-5-shyrochenkova-tetiana/
 100             <form class="md:col-span-2 space-y-6" method="post">
 101                 <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
 102                     <div>
-103                         <label for="first_name" class="block text-sm font-semibold mb-1">Ім?я</label>
+103                         <label for="first_name" class="block text-sm font-semibold mb-1">Р†Рј?СЏ</label>
 104                         <input
 105                             id="first_name"
 106                             name="firstName"
 107                             type="text"
-108                             placeholder="Введіть ім?я"
+108                             placeholder="Р’РІРµРґС–С‚СЊ С–Рј?СЏ"
 109                             class="bg-gray-50 outline-none border border-gray-300 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-green-500 focus:ring focus:ring-green-500 block w-full p-2.5"
 110                             value="<?= $profile['firstName'] ?? '' ?>"
 111                             autofocus
@@ -891,24 +907,24 @@ https://github.com/NureShyrochenkovaTetiana/smp-pzpi-23-5-shyrochenkova-tetiana/
 113                         />
 114                     </div>
 115                     <div>
-116                         <label for="last_name" class="block text-sm font-semibold mb-1">Прізвище</label>
+116                         <label for="last_name" class="block text-sm font-semibold mb-1">РџСЂС–Р·РІРёС‰Рµ</label>
 117                         <input
 118                             id="last_name"
 119                             name="lastName"
 120                             type="text"
-121                             placeholder="Введіть прізвище"
+121                             placeholder="Р’РІРµРґС–С‚СЊ РїСЂС–Р·РІРёС‰Рµ"
 122                             class="bg-gray-50 outline-none border border-gray-300 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-green-500 focus:ring focus:ring-green-500 block w-full p-2.5"
 123                             value="<?= $profile['lastName'] ?? '' ?>"
 124                             required
 125                         />
 126                     </div>
 127                     <div>
-128                         <label class="block text-sm font-semibold mb-1">Дата народження</label>
+128                         <label class="block text-sm font-semibold mb-1">Р”Р°С‚Р° РЅР°СЂРѕРґР¶РµРЅРЅСЏ</label>
 129                         <input
 130                             id="date_of_birth"
 131                             name="dateOfBirth"
 132                             type="date"
-133                             placeholder="Введіть ім?я"
+133                             placeholder="Р’РІРµРґС–С‚СЊ С–Рј?СЏ"
 134                             class="bg-gray-50 outline-none border border-gray-300 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-green-500 focus:ring focus:ring-green-500 block w-full p-2.5"
 135                             value="<?= $profile['dateOfBirth'] ?? '' ?>"
 136                             required
@@ -917,12 +933,12 @@ https://github.com/NureShyrochenkovaTetiana/smp-pzpi-23-5-shyrochenkova-tetiana/
 139                 </div>
 140 
 141                 <div>
-142                     <label for="description" class="block text-sm font-semibold mb-1">Опис</label>
+142                     <label for="description" class="block text-sm font-semibold mb-1">РћРїРёСЃ</label>
 143                     <input
 144                         id="description"
 145                         name="bio"
 146                         class="bg-gray-50 outline-none border border-gray-300 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-green-500 focus:ring focus:ring-green-500 block w-full p-2.5"
-147                         placeholder="Напишіть щось про себе..."
+147                         placeholder="РќР°РїРёС€С–С‚СЊ С‰РѕСЃСЊ РїСЂРѕ СЃРµР±Рµ..."
 148                         value="<?= $profile['bio'] ?? '' ?>"
 149                     >
 150                 </div>
@@ -933,11 +949,11 @@ https://github.com/NureShyrochenkovaTetiana/smp-pzpi-23-5-shyrochenkova-tetiana/
 155                 <div class="flex justify-end gap-3">
 156                     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
 157                         <button name="logout_action" class="bg-red-600 text-white h-9 px-3 min-w-[128px] rounded-lg text-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 ml-auto">
-158                             Вийти
+158                             Р’РёР№С‚Рё
 159                         </button>
 160           </form>
 161                     <button class="bg-green-600 text-white h-9 px-3 min-w-[128px] rounded-lg text-sm hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
-162                         Зберегти
+162                         Р—Р±РµСЂРµРіС‚Рё
 163                     </button>
 164                 </div>
 165             </form>
