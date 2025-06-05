@@ -1,0 +1,719 @@
+МІНІСТЕРСТВО ОСВІТИ І НАУКИ УКРАЇНИ
+ХАРКІВСЬКИЙ НАЦІОНАЛЬНИЙ УНІВЕРСИТЕТ РАДІОЕЛЕКТРОНІКИ
+
+
+КАФЕДРА ПРОГРАМНОЇ ІНЖЕНЕРІЇ
+
+
+
+
+Звіт
+з лабораторної роботи № 3 
+з дисципліни «Скриптові мови програмування»
+   
+
+
+
+
+
+
+
+
+Виконала:                                                                                     Перевірив:
+ст. гр. ПЗПІ-23-5                        		                ст. викладач кафедри ПІ
+Широченкова Тетяна Василівна    	           	      Сокорчук Ігор Петрович
+
+
+
+
+
+
+Харків 2025
+1 ІСТОРІЯ ЗМІН
+
+№ДатаВерсія звітуОпис змін та виправлень109.05.20250.1Створено розділ «Завдання»210.05.20250.1Створено розділ «Опис Виконаної роботи»311.05.20250.1Створено розділи «Висновки»,  «Додаток А», «Додаток Б», «Додаток В»
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2 ЗАВДАННЯ
+
+    Метою лабораторної роботи є створення простого веб-застосунку у вигляді інтернет-магазину. Проєкт повинен демонструвати базову взаємодію клієнта з сервером, використання HTML-форм, обробку запитів методом POST та збереження даних у сесії.
+     Основна увага приділяється реалізації сторінки з товарами, формуванню замовлення та його відображенню у кошику. Робота виконується з використанням мови програмування PHP.
+
+2.1  Вимоги до скрипта
+    Сайт повинен включати дві основні сторінки:
+     	—  сторінка товарів: відображає перелік доступних товарів з полями для вибору кількості та кнопкою «Купити». При надсиланні форми дані зберігаються в сесію;
+    —  сторінка «Кошик»: відображає вибрані товари з інформацією: ID, назва, ціна, кількість, сума. Також має бути кнопка для вилучення окремого товару.
+    Кожна сторінка повинна мати наступну структуру:
+    —  шапка (верхній рядок з назвою сайту та навігацією);
+    —  тіло сторінки (основний вміст);
+    —  підвал (footer із загальною інформацією або навігацією).
+    На сторінці кошика, якщо немає доданих товарів, необхідно виводити повідомлення з посиланням «Перейти до покупок».
+    
+    
+
+
+
+
+
+3 ОПИС ВИКОНАНОЇ РОБОТИ
+
+    Було реалізовано сайт з інтернет-магазином відповідно до вимог лабораторної роботи. Сайт складається з двох PHP-сторінок:
+    —  products.php — головна сторінка з переліком товарів;
+    —  cart.php — сторінка кошика.
+    
+3.1 Сторінка товарів
+    На сторінці товарів реалізовано:
+    —  виведення списку товарів у вигляді таблиці;
+    —  відображення назви, ціни та поля для введення кількості кожного товару;
+    —  форма надсилає дані методом POST;
+    —  після натискання кнопки «Купити», дані про обрані товари зберігаються у сесії.
+
+3.2 Сторінка кошика
+    На сторінці кошика реалізовано:
+    —  виведення таблиці з інформацією про обрані товари (ID, назва, ціна, кількість, сумарна вартість);
+—  кнопка для вилучення окремого товару;
+    —  якщо кошик порожній — відображається повідомлення з посиланням на сторінку покупок.
+
+
+
+
+
+
+
+
+4 ВИСНОВКИ
+
+     У ході виконання лабораторної роботи було створено веб-сайт, що реалізує базову функціональність інтернет-магазину. Розроблено сторінку товарів із можливістю вибору кількості та додавання до кошика, а також сторінку відображення замовлень, збережених у сесії. Сайт коректно обробляє введені дані та забезпечує взаємодію між клієнтом і сервером. 
+     Проект демонструє практичне застосування HTML, форм, PHP і сесій, що підтверджує розуміння основ веб-розробки та готовність до подальшого вдосконалення функціоналу.
+     
+
+
+
+
+
+
+ДОДАТОК А
+Відеозапис
+
+Відеозапис презентації результатів лабораторної роботи: https://youtu.be/MhJBhsV9-f0
+
+Хронологічний опис відеозапису:
+00:00 Вступ
+00:20 Вигляд сайту
+00:39 Головна сторiнка
+00:50 Сторінка “Товари”
+01:53 Кошик
+03:14 Логи
+03:33 Огляд директорії проекту 
+04:00 db/actions.php
+05:32 db/config.php
+06:55 db/storage.sqlite
+08:07 cart.php
+09:59 goods.php
+11:12 home.php
+12:00 index.php
+
+
+
+
+
+
+
+
+
+ДОДАТОК Б
+Графічні матеріали
+
+
+Рисунок Б.1 — Хедер сайту
+
+
+Рисунок Б.2 — Футер сайту
+
+
+Рисунок Б.3 — Сторінка товарів
+
+
+
+Рисунок Б.4 — Сторінка кошику
+
+
+ДОДАТОК В
+Програмний код
+В.1 smp-pzpi-23-5-shyrochenkova-tetiana 
+GitHub репозиторій:
+https://github.com/NureShyrochenkovaTetiana/smp-pzpi-23-5-shyrochenkova-tetiana/tree/main/Lab3/smp-pzpi-23-5-shyrochenkova-tetiana-lab3/smp-pzpi-23-5-shyrochenkova-tetiana-lab3-code
+
+  ./cart.php
+  1 <?php
+  2 
+  3 require_once 'db/actions.php';
+  4 
+  5 $products = getGoods();
+  6 $cartItemsForDisplay = getCart() ?? [];
+  7 $total = getTotal($cartItemsForDisplay ?? []);
+  8 
+  9 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+ 10     if (isset($_POST['action'])) {
+ 11         $productId = isset($_POST['product_id']) ? (int)$_POST['product_id'] : null;
+ 12 
+ 13         if ($productId && isset($products[$productId])) {
+ 14             unset($_SESSION["cart"][$productId]);
+ 15             $cart_action_message = htmlspecialchars($products[$productId]['title']) . " removed from cart.";
+ 16         } else if ($_POST["action"] === "checkout") {
+ 17             unset($_SESSION["cart"]);
+ 18         }
+ 19     }
+ 20 
+ 21     header("Location: " . htmlspecialchars($_SERVER["PHP_SELF"]));
+ 22 }
+ 23 ?>
+ 24 <!doctype html>
+ 25 <html lang="en">
+ 26 
+ 27 <head>
+ 28     <meta charset="UTF-8">
+ 29     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+ 30     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ 31     <title>
+ 32         Магазин "Весна"
+ 33     </title>
+ 34     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4">
+ 35     </script>
+ 36 </head>
+ 37 
+ 38 <body class="flex flex-col w-full h-dvh mt-auto">
+ 39 <header class="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur border-b-slate-300 supports-[backdrop-filter]:bg-white/60">
+ 40     <div class="container mx-auto px-4">
+ 41         <div class="flex h-16 items-center justify-between">
+ 42             <div class="flex items-center space-x-2">
+ 43                 <div class="flex h-8 w-8 items-center justify-center rounded-lg bg-green-600">
+ 44                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" viewBox="0 0 24 24">
+ 45                         <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+ 46                            stroke-width="2">
+ 47                             <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8c0 5.5-4.78 10-10 10"
+ 48                             />
+ 49                             <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
+ 50                         </g>
+ 51                     </svg>
+ 52                 </div>
+ 53                 <span class="text-xl font-bold text-green-600">
+ 54                 Весна
+ 55               </span>
+ 56             </div>
+ 57             <nav class="hidden md:flex items-center space-x-8">
+ 58                 <a href="/" class="text-sm font-medium transition-colors hover:text-green-600">
+ 59                     Головна
+ 60                 </a>
+ 61                 <a href="/goods" class="text-sm font-medium transition-colors hover:text-green-600">
+ 62                     Товари
+ 63                 </a>
+ 64             </nav>
+ 65             <a href="/cart" class="flex items-center justify-center min-w-32 h-9 rounded-md text-base text-white bg-green-600 hover:bg-green-700 px-2 gap-2">
+ 66                 <svg xmlns="http://www.w3.org/2000/svg" class="size-4" viewBox="0 0 24 24">
+ 67                     <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 11l-1 9m5-9l-4-7M2 11h20M3.5 11l1.6 7.4a2 2 0 0 0 2 1.6h9.8a2 2 0 0 0 2-1.6l1.7-7.4M4.5 15.5h15M5 11l4-7m0 7l1 9" />
+ 68                 </svg>
+ 69                 Кошик
+ 70             </a>
+ 71         </div>
+ 72     </div>
+ 73 </header>
+ 74 <main class="flex-1 container mx-auto px-4 py-8">
+ 75     <div class="mb-8">
+ 76         <h1 class="text-3xl font-bold mb-2">
+ 77             Наші товари
+ 78         </h1>
+ 79     </div>
+ 80     <div>
+ 81     <?php if (empty($cartItemsForDisplay)): ?>
+ 82         <div class="text-center py-12 bg-white shadow-md rounded-lg">
+ 83             <p class="text-gray-500 mb-4 text-xl">Ваш кошик пустий</p>
+ 84             <a href="/goods" class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 bg-green-600 text-white hover:bg-green-700">
+ 85                 Продовжити покупки
+ 86             </a>
+ 87         </div>
+ 88     <?php else: ?>
+ 89         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+ 90             <div class="lg:col-span-2">
+ 91                 <div class="bg-white shadow-md rounded-lg">
+ 92                     <div class="p-6">
+ 93                         <h2 class="text-xl font-semibold">Товари</h2>
+ 94                     </div>
+ 95                     <div class="p-6 pt-0">
+ 96                         <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+ 97                             <table class="w-full text-sm">
+ 98                                 <thead class="[&_tr]:border-b [&_tr]:border-b-slate-300 border-gray-200">
+ 99                                     <tr>
+100                                         <th class="h-12 px-3 text-left align-middle font-semibold text-gray-600">Назва</th>
+101                                         <th class="h-12 px-3 text-left align-middle font-semibold text-gray-600">Ціна</th>
+102                                         <th class="h-12 px-3 text-left align-middle font-semibold text-gray-600">Кількість</th>
+103                                         <th class="h-12 px-3 text-right align-middle font-semibold text-gray-600">До сплати</th>
+104                                         <th class="h-12 px-3 text-center align-middle font-semibold text-gray-600">Дії</th>
+105                                     </tr>
+106                                 </thead>
+107                                 <tbody class="[&_tr:last-child]:border-0">
+108                                     <?php foreach ($cartItemsForDisplay as $item): ?>
+109                                         <tr class="border-b-slate-300 border-gray-200 hover:bg-gray-50">
+110                                             <td class="p-3 align-middle font-medium text-gray-700"><?php echo htmlspecialchars($item['name']); ?></td>
+111                                             <td class="p-3 align-middle text-green-600">$<?php echo number_format($item['price'], 2); ?></td>
+112                                             <td class="p-3 align-middle">
+113                                                 <div class="flex items-center space-x-1">
+114                                                     <input
+115                                                         type="number"
+116                                                         min="0"
+117                                                         name="quantity_input"
+118                                                         value="<?php echo $item['quantity']; ?>"
+119                                                         class="w-16 text-center h-8 border-gray-300 rounded-md focus:ring-green-500 focus:border-green-500"
+120                                                         disabled
+121                                                     />
+122                                                 </div>
+123                                             </td>
+124                                             <td class="p-3 align-middle font-semibold text-right text-gray-700">$<?php echo number_format($item['total'], 2); ?></td>
+125                                             <td class="p-3 align-middle text-center">
+126                                                 <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" class="inline-flex">
+127                                                     <input type="hidden" name="product_id" value="<?php echo $item['id']; ?>">
+128                                                     <button
+129                                                         type="submit"
+130                                                         name="action" value="remove_item"
+131                                                         class="inline-flex items-center justify-center rounded-md text-sm font-medium border border-transparent h-8 w-8 text-red-600 hover:text-red-700 hover:bg-red-50"
+132                                                         title="Remove item"
+133                                                     >
+134                                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/><line x1="10" y1="11" x2="10" y2="17"/><line x1="14" y1="11" x2="14" y2="17"/></svg>
+135                                                     </button>
+136                                                 </form>
+137                                             </td>
+138                                         </tr>
+139                                     <?php endforeach; ?>
+140                                 </tbody>
+141                             </table>
+142                         </form>
+143                     </div>
+144                 </div>
+145             </div>
+146 
+147             <div class="lg:col-span-1">
+148                 <div class="bg-white shadow-md rounded-lg">
+149                     <div class="p-6">
+150                          <h2 class="text-xl font-semibold">Підсумок замовлення</h2>
+151                     </div>
+152                     <div class="p-6 pt-0 space-y-4">
+153                         <hr class="border-gray-200" />
+154                         <div class="flex justify-between font-semibold text-lg text-gray-800">
+155                             <span>До сплати:</span>
+156                             <span class="text-green-600">$<?php echo number_format($total, 2); ?></span>
+157                         </div>
+158                         <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" class="space-y-3">
+159                             <button type="submit" name="action" value="checkout" class="w-full inline-flex items-center justify-center rounded-md text-base font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-11 px-4 py-2 bg-green-600 text-white hover:bg-green-700">
+160                                 Оформити замовлення
+161                             </button>
+162                             <a href="/" class="w-full inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-gray-300 bg-white hover:bg-gray-100 hover:text-gray-800 h-10 px-4 py-2 text-gray-700">
+163                                 Продовжити покупки
+164                             </a>
+165                         </form>
+166                     </div>
+167                 </div>
+168             </div>
+169         <?php endif; ?>
+170     </div>
+171 </main>
+172 <footer class="bg-slate-50 border-t border-slate-300">
+173     <div class="container mx-auto px-4 py-8">
+174         <div>
+175             <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+176                 <div class="flex items-center space-x-2">
+177                     <div class="flex h-8 w-8 items-center justify-center rounded-lg bg-green-600">
+178                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" viewBox="0 0 24 24">
+179                             <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+180                                stroke-width="2">
+181                                 <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8c0 5.5-4.78 10-10 10"
+182                                 />
+183                                 <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
+184                             </g>
+185                         </svg>
+186                     </div>
+187                     <span class="text-xl font-bold text-green-600">
+188                   Весна
+189                 </span>
+190                 </div>
+191                 <div class="inline-flex space-x-5">
+192                     <a href="/" class="block text-sm text-gray-600 hover:text-green-600 transition-colors">
+193                         Головна
+194                     </a>
+195                     <a href="/goods" class="block text-sm text-gray-600 hover:text-green-600 transition-colors">
+196                         Товари
+197                     </a>
+198                     <a href="/cart" class="block text-sm text-gray-600 hover:text-green-600 transition-colors">
+199                         Кошик
+200                     </a>
+201                 </div>
+202             </div>
+203         </div>
+204     </div>
+205 </footer>
+206 </body>
+207 
+208 </html>
+
+./goods.php
+  1 <?php
+  2 
+  3 require_once 'db/actions.php';
+  4 
+  5 $products = getGoods();
+  6 
+  7 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+  8     if (isset($_POST['add_to_cart_product_id'])) {
+  9         $productId = (int)$_POST['add_to_cart_product_id'];
+ 10         $quantity = (int)$_POST['quantity'][$productId] ?? 0;
+ 11 
+ 12         if (isset($products[$productId])) {
+ 13             if ($quantity > 0) {
+ 14                 $_SESSION['cart'][$productId] = $quantity;
+ 15             }
+ 16         }
+ 17     }
+ 18 }
+ 19 
+ 20 ?>
+ 21 <!doctype html>
+ 22 <html lang="en">
+ 23 
+ 24 <head>
+ 25     <meta charset="UTF-8">
+ 26     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+ 27     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ 28     <title>
+ 29         Магазин "Весна"
+ 30     </title>
+ 31     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4">
+ 32     </script>
+ 33 </head>
+ 34 
+ 35 <body class="flex flex-col w-full h-dvh mt-auto">
+ 36 <header class="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur border-b-slate-300 supports-[backdrop-filter]:bg-white/60">
+ 37     <div class="container mx-auto px-4">
+ 38         <div class="flex h-16 items-center justify-between">
+ 39             <div class="flex items-center space-x-2">
+ 40                 <div class="flex h-8 w-8 items-center justify-center rounded-lg bg-green-600">
+ 41                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" viewBox="0 0 24 24">
+ 42                         <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+ 43                            stroke-width="2">
+ 44                             <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8c0 5.5-4.78 10-10 10"
+ 45                             />
+ 46                             <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
+ 47                         </g>
+ 48                     </svg>
+ 49                 </div>
+ 50                 <span class="text-xl font-bold text-green-600">
+ 51                 Весна
+ 52               </span>
+ 53             </div>
+ 54             <nav class="hidden md:flex items-center space-x-8">
+ 55                 <a href="/" class="text-sm font-medium transition-colors hover:text-green-600">
+ 56                     Головна
+ 57                 </a>
+ 58                 <a href="/goods" class="text-sm font-medium transition-colors hover:text-green-600">
+ 59                     Товари
+ 60                 </a>
+ 61             </nav>
+ 62             <a href="/cart" class="flex items-center justify-center min-w-32 h-9 rounded-md text-base text-white bg-green-600 hover:bg-green-700 px-2 gap-2">
+ 63                 <svg xmlns="http://www.w3.org/2000/svg" class="size-4" viewBox="0 0 24 24">
+ 64                     <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 11l-1 9m5-9l-4-7M2 11h20M3.5 11l1.6 7.4a2 2 0 0 0 2 1.6h9.8a2 2 0 0 0 2-1.6l1.7-7.4M4.5 15.5h15M5 11l4-7m0 7l1 9" />
+ 65                 </svg>
+ 66                 Кошик
+ 67             </a>
+ 68         </div>
+ 69     </div>
+ 70 </header>
+ 71 <main class="flex-1 container mx-auto px-4 py-8">
+ 72     <div class="mb-8">
+ 73         <h1 class="text-3xl font-bold mb-2">
+ 74             Наші товари
+ 75         </h1>
+ 76     </div>
+ 77     <div>
+ 78         <?php if (!empty($products)): ?>
+ 79           <form method="POST">
+ 80               <table class="w-full text-sm">
+ 81                   <thead class="[&_tr]:border-b [&_tr]:border-b-slate-300">
+ 82                   <tr>
+ 83                       <th class="h-10 px-2 text-left align-middle font-semibold text-muted-foreground">
+ 84                           Назва
+ 85                       </th>
+ 86                       <th class="h-10 px-2 text-left align-middle font-semibold text-muted-foreground">
+ 87                           Ціна
+ 88                       </th>
+ 89                       <th class="h-10 px-2 text-left align-middle font-semibold text-muted-foreground w-32">
+ 90                           Кількість
+ 91                       </th>
+ 92                       <th class="h-10 px-2 text-left align-middle font-semibold text-muted-foreground text-right">
+ 93                           Дії
+ 94                       </th>
+ 95                   </tr>
+ 96                   </thead>
+ 97                   <tbody class="[&_tr:last-child]:border-0">
+ 98                     <?php foreach ($products as $product): ?>
+ 99                       <tr class="border-b border-b-slate-300 transition-colors hover:bg-gray-50 data-[state=selected]:bg-muted">
+100                           <td class="p-2 align-middle font-medium">
+101                             <?php echo htmlspecialchars($product['name']); ?>
+102                           </td>
+103                           <td class="p-2 align-middle font-semibold text-green-600">
+104                               $<?php echo number_format($product['price'], 2); ?>
+105                           </td>
+106                           <td class="p-2 align-middle">
+107                               <input type="number" min="0" placeholder="0" name="quantity[<?php echo $product['id']; ?>]" value="0" max="100" class="flex h-9 w-20 rounded-md border border-slate-300 border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50" />
+108                           </td>
+109                           <td class="p-2 align-middle text-right">
+110                               <button type="submit" name="add_to_cart_product_id" value="<?php echo $product['id']; ?>" class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-9 px-3 text-white bg-green-600 hover:bg-green-700">
+111                                   У кошик
+112                               </button>
+113                           </td>
+114                       </tr>
+115                     <?php endforeach; ?>
+116                   </tbody>
+117               </table>
+118           </form>
+119         <?php endif; ?>
+120     </div>
+121 </main>
+122 <footer class="bg-slate-50 border-t border-slate-300">
+123     <div class="container mx-auto px-4 py-8">
+124         <div>
+125             <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+126                 <div class="flex items-center space-x-2">
+127                     <div class="flex h-8 w-8 items-center justify-center rounded-lg bg-green-600">
+128                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" viewBox="0 0 24 24">
+129                             <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+130                                stroke-width="2">
+131                                 <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8c0 5.5-4.78 10-10 10"
+132                                 />
+133                                 <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
+134                             </g>
+135                         </svg>
+136                     </div>
+137                     <span class="text-xl font-bold text-green-600">
+138                   Весна
+139                 </span>
+140                 </div>
+141                 <div class="inline-flex space-x-5">
+142                     <a href="/" class="block text-sm text-gray-600 hover:text-green-600 transition-colors">
+143                         Головна
+144                     </a>
+145                     <a href="/goods" class="block text-sm text-gray-600 hover:text-green-600 transition-colors">
+146                         Товари
+147                     </a>
+148                     <a href="/cart" class="block text-sm text-gray-600 hover:text-green-600 transition-colors">
+149                         Кошик
+150                     </a>
+151                 </div>
+152             </div>
+153         </div>
+154     </div>
+155 </footer>
+156 </body>
+157 </html>
+
+./index.php
+ $0); }' index.php
+  1 <?php
+  2 
+  3 require_once 'db/config.php';
+  4 
+  5 initializeDatabase();
+  6 
+  7 session_start();
+  8 
+  9 $path = $_SERVER['PATH_INFO'] ?? '/';
+ 10 
+ 11 initializeDatabase();
+ 12 
+ 13 switch ($path) {
+ 14     case '/':
+ 15         include "./home.php";
+ 16         break;
+ 17     case '/goods':
+ 18         include "./goods.php";
+ 19         break;
+ 20     case '/cart':
+ 21         include "./cart.php";
+ 22         break;
+ 23 }
+
+./home.php
+ $0); }' home.php
+  1 <?php
+  2 
+  3 $products = []
+  4 ?>
+  5 <!doctype html>
+  6 <html lang="en">
+  7 <head>
+  8     <meta charset="UTF-8">
+  9     <meta name="viewport"
+ 10                 content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+ 11     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ 12     <title>Магазин "Весна"</title>
+ 13     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+ 14 </head>
+ 15 <body class="flex flex-col w-full h-dvh mt-auto">
+ 16 <header class="sticky top-0 z-50 w-full border-b bg-white/95 border-b-slate-300 backdrop-blur supports-[backdrop-filter]:bg-white/60">
+ 17     <div class="container mx-auto px-4">
+ 18         <div class="flex h-16 items-center justify-between">
+ 19             <div class="flex items-center space-x-2">
+ 20                 <div class="flex h-8 w-8 items-center justify-center rounded-lg bg-green-600">
+ 21                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8c0 5.5-4.78 10-10 10"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></g></svg>
+ 22                 </div>
+ 23                 <span class="text-xl font-bold text-green-600">Весна</span>
+ 24             </div>
+ 25 
+ 26             <nav class="hidden md:flex items-center space-x-8">
+ 27                 <a href="/" class="text-sm font-medium transition-colors hover:text-green-600">
+ 28                     Головна
+ 29                 </a>
+ 30                 <a href="/goods" class="text-sm font-medium transition-colors hover:text-green-600">
+ 31                     Товари
+ 32                 </a>
+ 33             </nav>
+ 34 
+ 35             <a href="/cart" class="flex items-center justify-center min-w-32 h-9 rounded-md text-base text-white bg-green-600 hover:bg-green-700 gap-3 px-2">
+ 36                 <svg xmlns="http://www.w3.org/2000/svg" class="size-4" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 11l-1 9m5-9l-4-7M2 11h20M3.5 11l1.6 7.4a2 2 0 0 0 2 1.6h9.8a2 2 0 0 0 2-1.6l1.7-7.4M4.5 15.5h15M5 11l4-7m0 7l1 9"/></svg>
+ 37         Кошик
+ 38             </a>
+ 39         </div>
+ 40     </div>
+ 41 </header>
+ 42 <main class="flex flex-col size-full bg-slate-50 items-center justify-center gap-6">
+ 43     <h1 class="scroll-m-20 text-2xl font-semibold tracking-tight">Магазин "Весна"</h1>
+ 44 </main>
+ 45 <footer class="bg-slate-50 border-t border-slate-300">
+ 46     <div class="container mx-auto px-4 py-8">
+ 47         <div>
+ 48             <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+ 49                 <div class="flex items-center space-x-2">
+ 50                     <div class="flex h-8 w-8 items-center justify-center rounded-lg bg-green-600">
+ 51                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8c0 5.5-4.78 10-10 10"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></g></svg>
+ 52                     </div>
+ 53                     <span class="text-xl font-bold text-green-600">Весна</span>
+ 54                 </div>
+ 55                 <div class="inline-flex space-x-5">
+ 56                     <a href="/" class="block text-sm text-gray-600 hover:text-green-600 transition-colors">
+ 57                         Головна
+ 58                     </a>
+ 59                     <a href="/goods" class="block text-sm text-gray-600 hover:text-green-600 transition-colors">
+ 60                         Товари
+ 61                     </a>
+ 62                     <a href="/cart" class="block text-sm text-gray-600 hover:text-green-600 transition-colors">
+ 63                         Кошик
+ 64                     </a>
+ 65                 </div>
+ 66             </div>
+ 67         </div>
+ 68     </div>
+ 69 </footer>
+ 70 </body>
+ 71 </html>
+
+./db/actions.php
+ $0); }' actions.php 
+  1 <?php
+  2 
+  3 function getGoods() {
+  4     $connection = getDatabase();
+  5 
+  6     return $connection->query("SELECT * FROM goods")->fetchAll(PDO::FETCH_ASSOC);
+  7 }
+  8 
+  9 function getCart() {
+ 10     $products = getGoods();
+ 11     $cartItems = [];
+ 12 
+ 13     foreach ($products as $product) {
+ 14         if (isset($_SESSION['cart'][$product['id']])) {
+ 15             $item = [
+ 16                 'id' => $product['id'],
+ 17                 'name' => $product['name'],
+ 18                 'price' => $product['price'],
+ 19                 'quantity' => $_SESSION['cart'][$product['id']],
+ 20                 'total' => $product['price'] * $_SESSION['cart'][$product['id']]
+ 21             ];
+ 22 
+ 23             $cartItems[] = $item;
+ 24         }
+ 25     }
+ 26 
+ 27     return $cartItems;
+ 28 }
+ 29 
+ 30 function getTotal($cart) {
+ 31     $total = 0;
+ 32 
+ 33     foreach ($cart as $item) {
+ 34         $total += $item['total'];
+ 35     }
+ 36 
+ 37     return $total;
+ 38 }
+
+./db/config.php
+ $0); }' config.php 
+  1 <?php
+  2 
+  3 function getDatabase() {
+  4     return new PDO('sqlite:./db/storage.sqlite');
+  5 }
+  6 
+  7 function initializeDatabase() {
+  8     $connection = getDatabase();
+  9 
+ 10     $connection->exec("
+ 11         CREATE TABLE IF NOT EXISTS goods (
+ 12             id INTEGER PRIMARY KEY AUTOINCREMENT,
+ 13             name TEXT NOT NULL,
+ 14             price REAL NOT NULL
+ 15         )
+ 16     ");
+ 17 
+ 18     $hasProducts = $connection->query("SELECT COUNT(*) FROM goods")->fetchColumn();
+ 19 
+ 20     if (!$hasProducts) {
+ 21         $connection->exec("
+ 22             INSERT INTO goods (name, price) VALUES
+ 23             ('Молоко пастеризоване', 12),
+ 24         ('Хліб чорний', 9),
+ 25         ('Сир білий', 21),
+ 26         ('Сметана 20%', 25),
+ 27         ('Кефір 1%', 19),
+ 28         ('Вода газована', 25),
+ 29         ('Печиво \"Весна\"', 25);
+ 30         ");
+ 31     }
+ 32 }
+
+
+7
+
+
